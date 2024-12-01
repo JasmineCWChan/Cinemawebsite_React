@@ -50,7 +50,7 @@ const Checkout = () => {
     
         try{
             //try post order to database
-            const response = await fetch("http://localhost:5000/api/orders", {
+            const response = await fetch(`${import.meta.env.VITE_BE_URL}/api/orders`, {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({
